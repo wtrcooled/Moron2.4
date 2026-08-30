@@ -1,0 +1,235 @@
+/*
+  REM & RAM — Mainsail Theme
+  Blue = Rem, Pink = Ram
+  Designed for Mainsail dark mode.
+*/
+
+:root {
+  --rem: #49bcff;
+  --rem-soft: rgba(73, 188, 255, .24);
+  --ram: #f463b9;
+  --ram-soft: rgba(244, 99, 185, .24);
+  --rr-purple: #a86cff;
+  --rr-bg: rgba(7, 11, 23, .78);
+  --rr-card: rgba(11, 17, 32, .80);
+  --rr-border: rgba(136, 162, 210, .18);
+  --rr-text: #edf4ff;
+  --rr-muted: #9ba9c5;
+  --rr-shadow: 0 14px 35px rgba(0,0,0,.34);
+}
+
+/* Main page */
+main#content {
+  background:
+    linear-gradient(110deg, rgba(4,8,18,.72), rgba(6,10,22,.50)),
+    url("./main-background.png") center center / cover fixed !important;
+  min-height: 100vh;
+}
+
+/* Sidebar / navigation */
+.theme--dark.v-navigation-drawer,
+.theme--dark .v-navigation-drawer,
+.sidebar {
+  background:
+    linear-gradient(180deg, rgba(4,8,18,.78), rgba(4,8,18,.40)),
+    url("./sidebar-background.png") center bottom / cover no-repeat !important;
+  border-right: 1px solid rgba(244,99,185,.30) !important;
+  box-shadow: 8px 0 32px rgba(0,0,0,.30) !important;
+  backdrop-filter: blur(15px);
+}
+
+.theme--dark.v-navigation-drawer .active-nav-item,
+.theme--dark .v-navigation-drawer .active-nav-item {
+  background: linear-gradient(90deg, rgba(73,188,255,.22), rgba(244,99,185,.22)) !important;
+  border-left: 3px solid var(--rem);
+  box-shadow: inset 0 0 24px rgba(168,108,255,.12);
+}
+
+.theme--dark.v-navigation-drawer .v-list-item:hover,
+.theme--dark .v-navigation-drawer .v-list-item:hover {
+  background: rgba(73,188,255,.09) !important;
+}
+
+/* Header / top bar */
+.theme--dark.v-app-bar,
+.theme--dark .v-app-bar,
+.v-toolbar {
+  background: rgba(6,10,20,.86) !important;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(73,188,255,.18);
+}
+
+/* Cards */
+.theme--dark.v-sheet,
+.theme--dark .v-sheet,
+.v-card,
+.v-dialog {
+  background: linear-gradient(145deg, rgba(15,23,42,.88), rgba(8,13,28,.80)) !important;
+  border: 1px solid var(--rr-border) !important;
+  border-radius: 13px !important;
+  box-shadow: var(--rr-shadow);
+  backdrop-filter: blur(14px);
+}
+
+.v-card:hover {
+  border-color: rgba(168,108,255,.34) !important;
+  box-shadow:
+    0 14px 38px rgba(0,0,0,.38),
+    0 0 20px rgba(73,188,255,.06),
+    0 0 20px rgba(244,99,185,.06);
+}
+
+/* Card titles */
+.v-card__title,
+.text-h6,
+.text-subtitle-1 {
+  color: var(--rr-text) !important;
+}
+
+/* Inputs */
+.theme--dark .v-input__slot,
+.theme--dark .v-text-field > .v-input__control > .v-input__slot {
+  background: rgba(5,10,22,.76) !important;
+}
+
+.theme--dark .v-text-field--outlined fieldset {
+  border-color: rgba(73,188,255,.28) !important;
+}
+
+.theme--dark .v-input--is-focused fieldset {
+  border-color: var(--ram) !important;
+  box-shadow: 0 0 12px rgba(244,99,185,.16);
+}
+
+/* Buttons */
+.v-btn {
+  border-radius: 9px !important;
+}
+
+.v-btn:not(.v-btn--text):not(.v-btn--icon) {
+  background: linear-gradient(105deg, rgba(73,188,255,.12), rgba(244,99,185,.12)) !important;
+  border: 1px solid rgba(168,108,255,.24);
+}
+
+.v-btn:hover {
+  box-shadow: 0 0 16px rgba(73,188,255,.12), 0 0 16px rgba(244,99,185,.10);
+}
+
+/* Primary/accent treatment */
+.primary,
+.v-btn.primary {
+  background: linear-gradient(100deg, #338fd8, #9a62f0, #d74d9c) !important;
+  color: white !important;
+}
+
+/* Progress bars */
+.v-progress-linear__background {
+  background: rgba(91,111,150,.22) !important;
+}
+
+.v-progress-linear__determinate {
+  background: linear-gradient(90deg, var(--rem), var(--rr-purple), var(--ram)) !important;
+}
+
+/* Sliders */
+.v-slider__track-fill,
+.v-slider__thumb {
+  background: linear-gradient(90deg, var(--rem), var(--ram)) !important;
+  border-color: var(--rr-purple) !important;
+}
+
+/* Links/icons */
+a {
+  color: var(--rem);
+}
+
+a:hover {
+  color: var(--ram);
+}
+
+.v-icon.primary--text,
+.primary--text {
+  color: var(--rem) !important;
+}
+
+/* Tables */
+.theme--dark .v-data-table,
+.theme--dark.v-data-table {
+  background: rgba(8,13,27,.70) !important;
+}
+
+.theme--dark .v-data-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(73,188,255,.08), rgba(244,99,185,.08)) !important;
+}
+
+/* Console / code */
+code, pre,
+.console-output,
+.console-command {
+  font-variant-ligatures: none;
+}
+
+.console-output {
+  color: #c9d8ef !important;
+}
+
+/* Dialog/menu surfaces */
+.v-menu__content,
+.v-dialog__content .v-card {
+  backdrop-filter: blur(18px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #070b16;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--rem), var(--ram));
+  border-radius: 20px;
+  border: 2px solid #070b16;
+}
+
+/* Selection */
+::selection {
+  background: rgba(244,99,185,.35);
+  color: white;
+}
+
+/* Status colors: leave alarm/error semantics intact, but make healthy states pop */
+.success--text {
+  color: #63e6a5 !important;
+}
+
+/* Optional subtle glow around current card header icons */
+.v-card__title .v-icon {
+  filter: drop-shadow(0 0 6px rgba(73,188,255,.18));
+}
+
+/* Keep background art from hurting readability on small screens */
+@media (max-width: 960px) {
+  main#content {
+    background-position: 68% center !important;
+  }
+
+  .theme--dark.v-navigation-drawer,
+  .theme--dark .v-navigation-drawer,
+  .sidebar {
+    background-position: center bottom !important;
+  }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  .active-nav-item {
+    animation: rrPulse 5s ease-in-out infinite;
+  }
+
+  @keyframes rrPulse {
+    0%,100% { box-shadow: inset 0 0 18px rgba(73,188,255,.08); }
+    50% { box-shadow: inset 0 0 24px rgba(244,99,185,.12); }
+  }
+}
